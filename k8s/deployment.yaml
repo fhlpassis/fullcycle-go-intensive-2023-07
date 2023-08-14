@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gointensive
+spec:
+  selector:
+    matchLabels:
+      app: gointensive
+  template:
+    metadata:
+      labels:
+        app: gointensive
+    spec:
+      containers:
+      - name: gointensive
+        image: fhlpassis/fullcycle-go-intensive-2023-07
+        ports:
+        - containerPort: 3000
